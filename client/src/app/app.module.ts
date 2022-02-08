@@ -9,6 +9,13 @@ import { NavComponent } from './nav/nav.component';
 import { BsDropdownConfig, BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { MemberListComponent } from './members/member-list/member-list.component';
+import { Toast, ToastrModule } from 'ngx-toastr';
+import { SharedModule } from './_modules/shared.module';
+//import { clearScreenDown } from 'readline';
 
 
 @NgModule({
@@ -16,7 +23,11 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
     NavComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListsComponent,
+    MessagesComponent,
+    MemberDetailComponent,
+    MemberListComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +35,7 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    BsDropdownModule.forRoot()
+    SharedModule
     
   
   ],
